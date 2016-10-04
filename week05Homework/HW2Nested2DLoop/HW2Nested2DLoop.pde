@@ -23,20 +23,16 @@ background(255);
     }
   translate (x,y);
   fill(x,80,250);
-  ellipse(0,0,50,50);
-  ellipse(50,0,50,50);
-  ellipse(100,0,50,50);
-  ellipse(150,0,50,50);
-  ellipse(200,0,50,50);
-  ellipse(250,0,50,50);
-  ellipse(300,600,50,50);
-  ellipse(350,600,50,50);
-  ellipse(400,600,50,50);
-  ellipse(450,600,50,50);
-  ellipse(500,600,50,50);
-  ellipse(550,600,50,50);
-  x+=10;
-    
+  
+  for (int i = 0; i <=250; i += 50) {
+    ellipse (i, 0, 50,50);
+  }
+  
+  for (int i = 300; i <=550; i += 50) {
+    ellipse (i,600,50,50);
+  }
+  
+    x+=10; 
     if ( x > width) {
       x = 0;
     }
