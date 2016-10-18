@@ -1,6 +1,4 @@
 PImage[] images = new PImage[4];
-int x = 0;
-int y = 0;
 
 void setup () {
   size (1200, 600);
