@@ -9,10 +9,10 @@ void setup () {
   images[2] = loadImage("3.png");
   images[3] = loadImage("4.png");
 
- for (int i = 0; i < images.length; i++) {
-    loadImage("https://cdn.meme.am/instances/500x/50270050.jpg");
-    loadImage("https://66.media.tumblr.com/5c82e15337705f3775ef2ce00bf9b75b/tumblr_odo64pwzIP1v2pmsto1_500.png");
-  }
+ //for (int i = 0; i < images.length; i++) {
+ //   loadImage("Two.jpg");
+ //   loadImage("One.png");
+ // }
 }
 
 
@@ -23,3 +23,6 @@ void draw () {
   image(images[2],mouseX/1.2f,mouseY/1.2f,100,100);
   image(images[3],mouseX,mouseY,100,100);
 }
+
+//Not Sure, I think I did it manually and not actually using the loop?
+//Checked: not using loop. Don't know how to use loop to recreate same thing.
