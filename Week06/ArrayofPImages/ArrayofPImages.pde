@@ -4,10 +4,10 @@ int y = 0;
 
 void setup () {
   size (1200, 600);
-  images[0] = loadImage("https://66.media.tumblr.com/5c82e15337705f3775ef2ce00bf9b75b/tumblr_odo64pwzIP1v2pmsto1_500.png");
-  images[1] = loadImage("https://cdn.meme.am/instances/500x/50270050.jpg");
-  images[2] = loadImage("http://1.bp.blogspot.com/-y2r2UvMi6ag/VeM8ybC7XZI/AAAAAAAAORg/CZVayc2Fyz8/s400/3.png");
-  images[3] = loadImage("http://1.bp.blogspot.com/-FAW086hJ4hA/VeM81EM06wI/AAAAAAAAORo/33OjYTLvAm4/s400/4.png");
+  images[0] = loadImage("One.png");
+  images[1] = loadImage("Two.jpg");
+  images[2] = loadImage("3.png");
+  images[3] = loadImage("4.png");
 
  for (int i = 0; i < images.length; i++) {
     loadImage("https://cdn.meme.am/instances/500x/50270050.jpg");
