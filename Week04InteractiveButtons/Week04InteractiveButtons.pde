@@ -1,65 +1,38 @@
 //create one ellipse
-//create a rect
 //make the ellipse move
-//make ellipse and rect change color
-//make rect change background color when clicked
+//make ellipse and change color as it progresses across the screen
+//make the ellipse change size to be either bigger or smaller
 
-float x;
-float y;
-
-float dx;
-float dy;
-
-boolean rectClicked = false;
+int x;
+int y;
+int ell;
 
 void setup() {
-  size(400,400);
-    background(30);
+  size (400, 400);
+  background (30);
   noStroke();
-  
-  x = width/2;
-  y = height/2;
 
-  
-  dx = 2;
-  dy = 3;
-
+  ell = 20;
 }
 
-void draw(){
-  if (rectClicked) {
-    background(100);
-  } else {
-    background (200);
+void draw () {
+  ellipseMove ();
+  x += 10;
+  
+  if (x > width) {
+    x = 0;
+    y += 40;
   }
-  
-  float r = map(x,0,width,0,255);
-  float g = map(y,0,height,0,255);
-  
-  fill(r,g,150);
-  ellipse(x,y,30,30);
-  
-  rect(width/2,height/2,10,10);
-    x+=dx;
-    y+=dy;
+}
 
-    
-    if(x> width - 15 || x < 15) {
-      x -= dx;
-      dx = -dx; 
-    }
-    
-    if(y>height - 15 || y<15) {
-      y -= dy;
-      dy = -dy;
-    } 
-
+void ellipseMove () {
+  float r = map(x, 0, width, 0, 255);
+  float g = map(y, 0, height, 0, 255);
+  fill(r, g, 150);
+  ellipse(x, y, ell, ell);
 }
 
 void mouseClicked() {
-  float distance = dist(mouseX,mouseY,x,y);
-  
-  if (distance < x && distance < y) {
-  rectClicked = !rectClicked;
-  }
- }
+  float r = random(20,40);
+  ellipse(x,y, r,r);
+}
